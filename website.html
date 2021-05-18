@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(10, 14, 247);
+  margin-top: 70pt;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 47px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(12, 238, 12);
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.abs{
+margin-top: auto;
+color: blue;
+text-align: center;
+}
+.abs abss{
+  align-self:center;
+}
+{box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+</head>
+<body>
+ 
+<div class="abs">
+ 
+  <a href="ctevt.png"></a>
+  <img src="ctevt.png"align="left"/><br>
+  <br>
+
+  <h1>Madanpokhara Polytechnic Institute</h1>
+
+  <!--<h1>मदनपोखरा बहुप्राभीदिक शीक्षालय</h1>-->
+<h3>Damkada, Palpa</h3></div>
+<div class="topnav">
+  <a class="active" href="website.html">Home</a>
+  <a href="login.html">News</a>
+  <a href="#contact">Contact</a>
+  <a href="academic.html">Staffs</a>
+  <a href="Result">Result</a>
+  <a href="tools.html">Academies Tools</a>
+  <a href="about.html">About</a>
+   <a href="loginn.html">Login</a>
+  
+  
+</div>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="madanpokhara.jpg" style="width:80%">
+    <div class="text">Caption Text</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="ctevt.png" style="width:80%">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="login.png" style="width:80%">
+    <div class="text">Caption Three</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+<div style="padding-left:16px">
+  <div class="abs">
+  <img src="madanpokhara.jpg"style="width:500px;height:300px;"align="right"></div>
+  <h2>About Madanpokhara Polytechnic Institute</h2>
+  <p>This is the institute located in the beautiful valley of madi. it is located in Tansen Municipality -09 palpa. the only
+    college under the affiliation of ctevt<br>
+    It was established in 2075 with the starting of Diploma in Plant Science<br>
+    Madan Pokhara Polytechnic Institute is a constituent school of CTEVT and is established in 2011 A.D. It is located in Damkada in ward no.09 in Palpa district. It has been offering Diploma courses in Agriculture (Plant and Animal Science), Information Technology, and Forestry.
+Madanpokhara poliitechnic institute(MPPI) was established in 2018 under the Council for Technical Education and Vocational Training (CTEVT) as its own constituted school to provide technical education and vocational trainings related to 
+agriculture and Infromation Technology as well as various other vocational trainings.The school is located at Tansen
+ Municipality ward No 9,Damkada,palpa MPPI has 120 ropani of land having its own building like Admin block,Academic 
+ block(Theory and practical Buildings),Agriculture farm(Vagetable,fruit orchard,food crops,and livestock farm and fish pond) and
+  very dense natural forest in the beginning MPPI started the Diploma in plant Science. Now we offer three diploma courses viz.
+  Diploma in Agriculture(Plant Science),Diploma in Agriculture(Animal Science) And Diploma in Infromation Technology.
+  Beside rugular program, we have been provided various vocational short term training.
+   In the fiscal year 2075/76,we provided vocational training to 600 individuals.
+
+    <br>
+    <br>
+    
+  </p>
+</div>
+  <h2> Course Offered</h2>
+  <ol>
+    <ul><b>Dipolma In Information Technology</ul>
+    <ul>Diploma in Agriculture(Plant Science)</ul>
+    <ul>Diploma in Agriculture(Animal Science)</ul></b>
+  </ol>
+
+
+
+</body>
+</html>
